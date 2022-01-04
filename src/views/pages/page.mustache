@@ -10,9 +10,24 @@
             <img src="images/{{ image }}" class="item--image" />
             <div class="item--dice">
                 <div class="item--name">{{ name }}</div>
-                <div class="item--lifeexpectancy">Expectativa de Vida: <br/><span>{{ life_expectancy }}</span></div>
-                <div class="item--heightaverage">Média de Altura: <span>{{ height_average }}</span></div>
-                <div class="item--averageweight">Média de Peso: <span>{{ average_weight }}</span></div>
+                {{#life_expectancy}}
+                    <div class="item--lifeexpectancy">Expectativa de Vida: <span>{{ life_expectancy }}</span></div>
+                {{/life_expectancy}}
+                {{^life_expectancy}}
+                    <div class="item--lifeexpectancy">Expectativa de Vida: <span>?</span></div>
+                {{/life_expectancy}}
+                {{#height_average}}
+                    <div class="item--heightaverage">Média de Altura: <span>{{ height_average }}</span></div>
+                {{/height_average}}
+                {{^height_average}}
+                    <div class="item--heightaverage">Média de Altura: <span>?</span></div>
+                {{/height_average}}
+                {{#average_weight}}
+                    <div class="item--averageweight">Média de Peso: <span>{{ average_weight }}</span></div>
+                {{/average_weight}}
+                {{^average_weight}}
+                    <div class="item--averageweight">Média de Peso: <span>?</span></div>
+                {{/average_weight}}
             </div>
         </div>
     {{/list}}
