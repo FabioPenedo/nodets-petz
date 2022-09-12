@@ -55,4 +55,4 @@ heroku create
 git push heroku main
 heroku open
 ```
-Feito com ❤️ por Fábio Penedo: 👋 [Entre em contato](https://www.linkedin.com/in/fabiopenedo/)
+Feito por Fábio Penedo: 👋 [Entre em contato](https://www.linkedin.com/in/fabiopenedo/)
